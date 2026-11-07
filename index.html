@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IA no Balcão — prompts prontos para o seu comércio</title>
+<meta name="description" content="Guia e kit com prompts e mensagens prontas para o pequeno comércio usar inteligência artificial grátis: atender no WhatsApp, postar, responder avaliações e organizar o dia a dia.">
+<meta property="og:title" content="IA no Balcão — seu comércio + IA, sem enrolação">
+<meta property="og:description" content="Prompts e mensagens prontas para atender, vender e organizar. Guia na Amazon e kit pronto para usar.">
+<meta property="og:image" content="tio-da-ia.jpg">
+<meta name="theme-color" content="#1B2A41">
+<style>
+@font-face{font-family:"Archivo Black";src:url(ArchivoBlack.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"Work Sans";src:url(WorkSans.ttf) format("truetype");font-weight:100 900;font-display:swap}
+:root{
+  --creme:#FFF6E9; --creme2:#FBEBD3; --navy:#1B2A41; --navy2:#2A3D5C;
+  --verm:#D9433A; --amar:#F4C542; --texto:#1B2A41; --suave:#5A6475; --branco:#fff;
+  --raio:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--creme);color:var(--texto);font-family:"Work Sans",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1060px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:"Archivo Black",system-ui,sans-serif;font-weight:400;line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(28px,5vw,40px);margin-bottom:14px}
+.kicker{display:inline-block;background:var(--navy);color:var(--amar);font-family:"Archivo Black";font-size:13px;letter-spacing:.06em;padding:6px 12px;border-radius:8px;text-transform:uppercase}
+.marca{background:linear-gradient(transparent 58%,var(--amar) 58%,var(--amar) 92%,transparent 92%)}
+section{padding:64px 0}
+
+/* toldo */
+.toldo{height:44px;background:
+  radial-gradient(circle at 50% 0,transparent 0) ,
+  repeating-linear-gradient(90deg,var(--verm) 0 72px,var(--branco) 72px 144px);
+  -webkit-mask:radial-gradient(36px 22px at 36px 0,#000 98%,transparent) 0 0/72px 44px repeat-x;
+          mask:radial-gradient(36px 30px at 36px 0,#000 98%,transparent) 0 0/72px 44px repeat-x;
+  height:30px}
+.faixa-toldo{background:repeating-linear-gradient(90deg,var(--verm) 0 72px,var(--branco) 72px 144px);height:16px}
+
+/* topo */
+.topo{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-family:"Archivo Black";font-size:20px;text-decoration:none}
+.logo span{color:var(--verm)}
+.topo a.ig{font-weight:600;font-size:15px;text-decoration:none;border-bottom:2px solid var(--amar)}
+
+/* hero */
+.hero{padding:28px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(38px,7.2vw,66px);margin:16px 0 18px}
+.hero p.lead{font-size:clamp(18px,2.4vw,21px);color:var(--suave);max-width:34em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;font-size:17px;padding:16px 22px;border-radius:14px;border:3px solid var(--navy);transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 5px 0 var(--navy)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--navy)}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 var(--navy)}
+.btn.prim{background:var(--verm);color:#fff}
+.btn.sec{background:var(--branco);color:var(--navy)}
+.btn small{font-weight:500;opacity:.85}
+.nota{font-size:14px;color:var(--suave);margin-top:14px}
+.avatar{position:relative}
+.avatar img{border-radius:26px;border:4px solid var(--navy);box-shadow:10px 10px 0 var(--amar);aspect-ratio:2/3;object-fit:cover;width:100%;max-width:380px;margin-left:auto}
+.selo-ia{position:absolute;left:8px;bottom:14px;background:var(--navy);color:#fff;font-size:12px;font-weight:600;padding:6px 10px;border-radius:999px}
+
+/* dores */
+.dores{background:var(--navy);color:#fff}
+.dores h2{color:#fff}
+.dores .sub{color:#C9D2E3;max-width:40em}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.dor{background:var(--navy2);border-radius:var(--raio);padding:22px;border-top:6px solid var(--amar)}
+.dor .h{font-family:"Archivo Black";font-size:20px;margin-bottom:8px;line-height:1.2}
+.dor p{color:#C9D2E3;font-size:16px}
+
+/* exemplo */
+.ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px;align-items:start}
+.bloco{background:#fff;border:3px solid var(--navy);border-radius:var(--raio);overflow:hidden}
+.bloco .tit{background:var(--amar);font-weight:700;padding:10px 16px;border-bottom:3px solid var(--navy);font-size:15px}
+.bloco pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14.5px;line-height:1.55;white-space:pre-wrap;padding:16px;color:#222}
+.bloco pre b{background:#FFF0B8;font-weight:600}
+.chat{padding:18px;display:flex;flex-direction:column;gap:10px;background:#E9E2D6}
+.msg{max-width:88%;padding:10px 14px;border-radius:14px;font-size:15.5px;line-height:1.45;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.msg.cli{background:#fff;align-self:flex-start;border-top-left-radius:4px}
+.msg.voce{background:#D7F5C9;align-self:flex-end;border-top-right-radius:4px}
+.msg .q{display:block;font-size:12px;color:#6b7280;margin-top:4px;text-align:right}
+.passos{list-style:none;margin-top:18px;display:grid;gap:10px}
+.passos li{display:flex;gap:12px;align-items:flex-start}
+.passos .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--verm);color:#fff;font-weight:700;display:grid;place-items:center;font-size:15px}
+.aviso{font-size:14px;color:var(--suave);margin-top:14px}
+
+/* ofertas */
+.ofertas{background:var(--creme2)}
+.of-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
+.of{background:#fff;border:3px solid var(--navy);border-radius:22px;padding:24px;display:flex;flex-direction:column;position:relative}
+.of.dest{box-shadow:10px 10px 0 var(--verm)}
+.of .tag{position:absolute;top:-14px;right:18px;background:var(--verm);color:#fff;font-weight:700;font-size:13px;padding:5px 12px;border-radius:999px;border:3px solid var(--navy)}
+.of-top{display:flex;gap:16px;align-items:center;margin-bottom:16px}
+.of-top img{width:92px;border-radius:10px;border:2px solid var(--navy)}
+.of-top img.kit{width:120px}
+.of h3{font-size:24px}
+.of .pra{color:var(--suave);font-size:15px}
+.of ul{list-style:none;display:grid;gap:9px;margin:6px 0 20px}
+.of li{padding-left:28px;position:relative;font-size:16px}
+.of li::before{content:"";position:absolute;left:0;top:.35em;width:16px;height:16px;border-radius:50%;background:var(--amar);border:2px solid var(--navy)}
+.preco{display:flex;align-items:baseline;gap:8px;margin:auto 0 14px}
+.preco b{font-family:"Archivo Black";font-size:40px;white-space:nowrap}
+.preco span{color:var(--suave);font-size:15px}
+.of .btn{width:100%}
+.combo{margin-top:22px;text-align:center;color:var(--suave);font-size:16px}
+
+/* regras */
+.regras-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
+.regra{background:#fff;border-radius:14px;padding:16px 18px;border-left:6px solid var(--verm);font-size:16px}
+.regra b{display:block;margin-bottom:2px}
+
+/* faq */
+.faq{max-width:780px}
+details{background:#fff;border:2px solid var(--navy);border-radius:14px;margin-top:12px;padding:0 18px}
+summary{cursor:pointer;font-weight:700;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:"Archivo Black";color:var(--verm);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 16px;color:#333}
+
+/* final */
+.final{background:var(--navy);color:#fff;text-align:center}
+.final h2{color:#fff}
+.final p{color:#C9D2E3;max-width:36em;margin:0 auto}
+.final .ctas{justify-content:center}
+.final .btn.sec{background:var(--amar)}
+footer{padding:28px 0 40px;font-size:14px;color:var(--suave)}
+footer .wrap{display:grid;gap:8px}
+
+@media (max-width:820px){
+  .hero-grid,.ex-grid,.of-grid{grid-template-columns:1fr}
+  .avatar img{max-width:230px;margin:6px auto 0;box-shadow:8px 8px 0 var(--amar)}
+  .selo-ia{left:50%;transform:translateX(-50%);white-space:nowrap}
+  .hero{padding-bottom:40px}
+  .of-top img{width:80px}
+  .of-top img.kit{width:110px}
+  .cards3{grid-template-columns:1fr}
+  .regras-grid{grid-template-columns:1fr}
+  section{padding:48px 0}
+  .btn{width:100%}
+  .of.dest{box-shadow:6px 6px 0 var(--verm)}
+}
+</style>
+</head>
+<body>
+
+<div class="faixa-toldo" aria-hidden="true"></div>
+
+<header class="wrap topo">
+  <a class="logo" href="#">IA no <span>Balcão</span></a>
+  <a class="ig" href="https://www.instagram.com/otiodaia/" target="_blank" rel="noopener">@otiodaia</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Para o pequeno comércio</span>
+      <h1>Seu comércio + IA, <span class="marca">sem enrolação.</span></h1>
+      <p class="lead">Prompts e mensagens prontas para responder cliente, postar, responder avaliação e organizar o dia a dia. No seu celular, com IA grátis, sem precisar programar.</p>
+      <div class="ctas">
+        <a class="btn prim" href="#ofertas">Quero começar</a>
+        <a class="btn sec" href="#exemplo">Ver um exemplo</a>
+      </div>
+      <p class="nota">Para restaurante, pizzaria, salão, barbearia, clínica de estética, pet shop, oficina e loja de bairro.</p>
+    </div>
+    <div class="avatar">
+      <img src="tio-da-ia.jpg" alt="Tio da IA, personagem 3D careca, de barba e camisa polo azul, acenando com um notebook embaixo do braço" width="640" height="960">
+      <span class="selo-ia">Tio da IA · avatar criado com IA</span>
+    </div>
+  </div>
+</section>
+
+<section class="dores">
+  <div class="wrap">
+    <h2>Você abriu o negócio para vender, não para passar a noite no celular.</h2>
+    <p class="sub">Todo mundo diz que "a IA resolve". Aqui você vê <b>como</b>, tarefa por tarefa, no seu balcão.</p>
+    <div class="cards3">
+      <div class="dor"><div class="h">Cliente pergunta o preço às 23h</div><p>Respostas prontas para horário, preço, entrega e agendamento, salvas para mandar com dois toques.</p></div>
+      <div class="dor"><div class="h">O post da semana não saiu</div><p>Legendas com o nome do bairro e ideias de vídeo sem precisar aparecer, para o mês inteiro.</p></div>
+      <div class="dor"><div class="h">Avaliação de 1 estrela sem resposta</div><p>Respostas educadas para elogio, crítica e até avaliação de quem nunca foi cliente.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="exemplo">
+  <div class="wrap">
+    <span class="kicker">Exemplo real do guia</span>
+    <h2 style="margin-top:14px">Copia, troca o que está entre colchetes, cola na IA.</h2>
+    <div class="ex-grid">
+      <div class="bloco">
+        <div class="tit">Prompt 1.1 · A resposta que você mais digita</div>
+<pre>Tenho um(a) <b>[tipo de negócio]</b> no bairro <b>[bairro]</b>.
+A pergunta que mais recebo no WhatsApp é:
+"<b>[cole a pergunta]</b>"
+A resposta certa é: <b>[escreva do seu jeito, sem capricho]</b>.
+Escreva 3 versões dessa resposta para eu mandar ao cliente:
+- no máximo 3 linhas;
+- tom simpático, como se eu estivesse no balcão;
+- no máximo 1 emoji;
+- use SÓ as informações que eu dei. Se faltar algo,
+  escreva [CONFERIR] em vez de inventar.</pre>
+      </div>
+      <div>
+        <div class="bloco">
+          <div class="tit">O que a Dona Cida (pizzaria do livro) mandou depois</div>
+          <div class="chat">
+            <div class="msg cli">Que horas vocês abrem?<span class="q">22:47</span></div>
+            <div class="msg voce">Oi! Abrimos de terça a domingo, das 18h às 23h30. Na segunda a pizzaria descansa. 🍕 Pode mandar seu pedido por aqui mesmo!<span class="q">22:47 ✓✓</span></div>
+          </div>
+        </div>
+        <ul class="passos">
+          <li><span class="n">1</span><span>Ela digitou do jeito dela: <i>"abre 18h fecha 23h30 terça a domingo segunda fechado"</i>.</span></li>
+          <li><span class="n">2</span><span>Escolheu uma das 3 versões e <b>conferiu o horário</b>.</span></li>
+          <li><span class="n">3</span><span>Salvou como resposta rápida. Agora são dois toques.</span></li>
+        </ul>
+        <p class="aviso">Dona Cida é uma personagem do livro. A regra do [CONFERIR] existe porque IA inventa quando falta informação; o guia ensina a evitar isso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ofertas" id="ofertas">
+  <div class="wrap">
+    <span class="kicker">Escolha o seu jeito</span>
+    <h2 style="margin-top:14px">Quer aprender ou quer pronto?</h2>
+    <div class="of-grid">
+      <article class="of">
+        <div class="of-top">
+          <img src="capa-guia.jpg" alt="Capa do eBook IA no Balcão" width="480" height="768">
+          <div><h3>Guia IA no Balcão</h3><p class="pra">Para quem quer aprender a usar a IA no próprio negócio.</p></div>
+        </div>
+        <ul>
+          <li>157 prompts prontos para copiar, separados por tarefa</li>
+          <li>12 capítulos curtos: atender, vender, avaliações, gestão e equipe</li>
+          <li>Prompts extras para 6 tipos de negócio</li>
+          <li>Plano de 7 e de 30 dias para colocar em prática</li>
+          <li>Cuidados com LGPD e com o que a IA inventa</li>
+        </ul>
+        <div class="preco"><b>R$ 5,99</b><span>eBook Kindle · lê no celular pelo app Kindle grátis</span></div>
+        <a class="btn sec" href="https://www.amazon.com.br/dp/B0HQF75XW7" target="_blank" rel="noopener">Ver o guia na Amazon</a>
+      </article>
+      <article class="of dest">
+        <span class="tag">Tudo pronto</span>
+        <div class="of-top">
+          <img class="kit" src="kit-produto.jpg" alt="Kit IA no Balcão: pronto para usar" width="720" height="600">
+          <div><h3>Kit IA no Balcão</h3><p class="pra">Para quem não quer escrever nada: é trocar o nome e usar.</p></div>
+        </div>
+        <ul>
+          <li>66 mensagens de WhatsApp Business, com atalhos</li>
+          <li>30 posts com legenda e ideia de vídeo sem aparecer</li>
+          <li>Calendário de promoções até outubro de 2027, com textos</li>
+          <li>20 respostas para avaliações do Google</li>
+          <li>Planilhas de preço de venda e de caixa da semana</li>
+        </ul>
+        <div class="preco"><b>R$ 27</b><span>pagamento único · 7 dias de garantia</span></div>
+        <a class="btn prim" href="https://pay.kiwify.com.br/XuByZcg" target="_blank" rel="noopener">Quero o kit pronto</a>
+      </article>
+    </div>
+    <p class="combo">O guia ensina a criar os seus textos; o kit traz textos diferentes, já prontos. Um completa o outro, e cada um funciona sozinho.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Feito respeitando as regras do comércio</h2>
+    <div class="regras-grid">
+      <div class="regra"><b>Promoção só para quem autorizou</b>com saída fácil da lista (LGPD).</div>
+      <div class="regra"><b>Avaliação sem brinde</b>pedir pode; oferecer algo em troca, o Google proíbe.</div>
+      <div class="regra"><b>Preço real na promoção</b>sem inflar o "de" antes do desconto (Código de Defesa do Consumidor).</div>
+      <div class="regra"><b>Nada de dado de cliente na IA grátis</b>sem CPF, telefone ou dado de saúde no chat.</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap faq">
+    <h2>Perguntas rápidas</h2>
+    <details><summary>Preciso saber usar inteligência artificial?</summary><p>Não. O guia começa do zero e usa IA gratuita, como ChatGPT, Gemini ou Copilot. O kit nem precisa de IA: os textos já vêm prontos.</p></details>
+    <details><summary>Não tenho Kindle. Consigo ler o guia?</summary><p>Sim. O app Kindle é grátis para celular e computador. Você compra na Amazon e lê no app.</p></details>
+    <details><summary>Meu negócio não está na lista. Serve?</summary><p>Provavelmente sim. Uma sorveteria usa o bloco de restaurante, uma manicure usa o de salão, um armarinho usa o de loja de bairro.</p></details>
+    <details><summary>Como recebo o kit?</summary><p>Logo depois da confirmação do pagamento, você recebe o acesso por e-mail: arquivos em PDF e planilhas que abrem no Google Planilhas (grátis) ou no Excel.</p></details>
+    <details><summary>E se eu não gostar do kit?</summary><p>Você tem 7 dias de garantia. Peça o reembolso pela própria Kiwify e recebe o valor de volta, sem precisar explicar o motivo.</p></details>
+    <details><summary>Isso é promessa de vender mais?</summary><p>Não. O material economiza o tempo de escrever e ajuda a atender melhor. Resultado depende do seu negócio, do seu atendimento e da sua região.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Escolha uma tarefa e resolva ainda esta semana.</h2>
+    <p>Comece pelo que mais toma o seu tempo hoje: a mensagem que você mais digita.</p>
+    <div class="ctas">
+      <a class="btn sec" href="https://www.amazon.com.br/dp/B0HQF75XW7" target="_blank" rel="noopener">Guia · R$ 5,99</a>
+      <a class="btn prim" href="https://pay.kiwify.com.br/XuByZcg" target="_blank" rel="noopener">Kit pronto · R$ 27</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>IA no Balcão</b> · guia e kit de E. Zavatt · dúvidas: <a href="mailto:zavattaroenio@gmail.com">zavattaroenio@gmail.com</a></div>
+    <div>O Tio da IA é um personagem criado com inteligência artificial. Os exemplos com Dona Cida e outros personagens são fictícios.</div>
+    <div>As marcas citadas pertencem aos seus donos. Este material é independente e não tem vínculo com elas.</div>
+  </div>
+</footer>
+</body>
+</html>
