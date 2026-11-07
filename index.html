@@ -7,7 +7,9 @@
 <meta name="description" content="Guia e kit com prompts e mensagens prontas para o pequeno comércio usar inteligência artificial grátis: atender no WhatsApp, postar, responder avaliações e organizar o dia a dia.">
 <meta property="og:title" content="IA no Balcão — seu comércio + IA, sem enrolação">
 <meta property="og:description" content="Prompts e mensagens prontas para atender, vender e organizar. Guia na Amazon e kit pronto para usar.">
-<meta property="og:image" content="tio-da-ia.jpg">
+<meta property="og:image" content="https://zavattaro.github.io/ia-no-balcao/tio-da-ia.jpg">
+<meta property="og:url" content="https://zavattaro.github.io/ia-no-balcao/">
+<meta property="og:type" content="website">
 <meta name="theme-color" content="#1B2A41">
 <style>
 @font-face{font-family:"Archivo Black";src:url(ArchivoBlack.ttf) format("truetype");font-display:swap}
@@ -110,6 +112,24 @@ section{padding:64px 0}
 .regras-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
 .regra{background:#fff;border-radius:14px;padding:16px 18px;border-left:6px solid var(--verm);font-size:16px}
 .regra b{display:block;margin-bottom:2px}
+
+
+/* serviço */
+.servico{background:var(--navy);color:#fff}
+.serv-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:center}
+.servico h2{color:#fff}
+.servico p.sub{color:#C9D2E3}
+.serv-lista{list-style:none;display:grid;gap:12px;margin:22px 0}
+.serv-lista li{background:var(--navy2);border-radius:14px;padding:14px 16px;border-left:6px solid var(--amar)}
+.serv-lista b{display:block;color:#fff;margin-bottom:2px}
+.serv-lista span{color:#C9D2E3;font-size:15.5px}
+.btn.zap{background:#25D366;color:#0b2b17;border-color:#0b2b17;box-shadow:0 5px 0 #0b2b17}
+.btn.zap:hover{box-shadow:0 7px 0 #0b2b17}
+.serv-foto{position:relative;max-width:330px;margin:0 auto}
+.serv-foto img{border-radius:24px;border:4px solid #fff;box-shadow:10px 10px 0 var(--verm);aspect-ratio:2/3;object-fit:cover;max-width:330px;margin:0 auto}
+.serv-nota{font-size:14px;color:#C9D2E3;margin-top:12px}
+@media (max-width:820px){.serv-grid{grid-template-columns:1fr}.serv-foto{position:relative;max-width:330px;margin:0 auto}
+.serv-foto img{max-width:220px}}
 
 /* faq */
 .faq{max-width:780px}
@@ -275,7 +295,25 @@ Escreva 3 versões dessa resposta para eu mandar ao cliente:
   </div>
 </section>
 
-<section style="padding-top:0">
+<section class="servico" id="servico">
+  <div class="wrap serv-grid">
+    <div class="serv-foto avatar"><img src="tio-da-ia-bancada.jpg" alt="Tio da IA sentado na bancada com notebook e celular" width="640" height="960"><span class="selo-ia">Tio da IA · avatar criado com IA</span></div>
+    <div>
+      <span class="kicker" style="background:var(--amar);color:var(--navy)">Feito para você</span>
+      <h2 style="margin-top:14px">Prefere que alguém monte tudo para você?</h2>
+      <p class="sub">Tudo do guia dá para fazer sozinho. Mas se o balcão não para e o "mexer no WhatsApp" fica sempre para domingo, eu monto para você:</p>
+      <ul class="serv-lista">
+        <li><b>Cardápio ou catálogo digital</b><span>com pedido que cai direto no seu WhatsApp, sem comissão por pedido.</span></li>
+        <li><b>Site de uma página + Google</b><span>endereço, horário, mapa e botão de conversa, mais o Perfil da Empresa no Google revisado.</span></li>
+        <li><b>Atendimento automático</b><span>com as respostas que você aprovar, passando para uma pessoa quando precisa.</span></li>
+      </ul>
+      <a class="btn zap" href="https://wa.me/5511963663731?text=Oi!%20Vim%20pela%20p%C3%A1gina%20do%20IA%20no%20Balc%C3%A3o%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a>
+      <p class="serv-nota">Atendo presencialmente Jundiaí e região, e a distância qualquer cidade. O WhatsApp é para orçamento de serviço; dúvidas sobre o guia e o kit, pelo e-mail no rodapé.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:48px">
   <div class="wrap faq">
     <h2>Perguntas rápidas</h2>
     <details><summary>Preciso saber usar inteligência artificial?</summary><p>Não. O guia começa do zero e usa IA gratuita, como ChatGPT, Gemini ou Copilot. O kit nem precisa de IA: os textos já vêm prontos.</p></details>
