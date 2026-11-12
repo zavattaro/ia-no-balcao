@@ -359,5 +359,9 @@ Escreva 3 versões dessa resposta para eu mandar ao cliente:
     <div>As marcas citadas pertencem aos seus donos. Este material é independente e não tem vínculo com elas.</div>
   </div>
 </footer>
+<script>
+/* Repassa utm_*, src e sck da URL para os botoes da Kiwify (Fase 1.5, 12/11/2026) */
+(function(){try{var p=new URLSearchParams(location.search),k=new URLSearchParams();p.forEach(function(v,n){if(/^utm_|^(src|sck)$/i.test(n))k.set(n,v);});var s=k.toString();if(!s)return;document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(a){a.href+=(a.href.indexOf('?')<0?'?':'&')+s;});}catch(e){}})();
+</script>
 </body>
 </html>
